@@ -130,8 +130,9 @@ GameObject:
   m_Component:
   - component: {fileID: 387648500}
   - component: {fileID: 387648501}
+  - component: {fileID: 387648502}
   m_Layer: 0
-  m_Name: Bullet_Control
+  m_Name: Bullet_Pooler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,6 +162,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54b6f5f1b1a9fa44ca246a8901079bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  activeTime: 3
+  spawnTime: 0
+--- !u!114 &387648502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387648499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776466e8b6dfaf045ab4c2e90b0d5899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &488415592
