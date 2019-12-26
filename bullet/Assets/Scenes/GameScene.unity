@@ -179,6 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776466e8b6dfaf045ab4c2e90b0d5899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coolTime: 0.1
+  bullet: {fileID: 0}
+  poolCount: 0
 --- !u!1 &488415592
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +398,7 @@ GameObject:
   - component: {fileID: 1056443588}
   - component: {fileID: 1056443587}
   - component: {fileID: 1056443589}
+  - component: {fileID: 1056443590}
   m_Layer: 0
   m_Name: main_character
   m_TagString: Untagged
@@ -476,3 +480,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4586e84de9d590d43916293d81ad7f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 20
+--- !u!58 &1056443590
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056443586}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.0699999
