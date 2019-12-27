@@ -1,12 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BulletBehavior : MonoBehaviour
 {
-    public float speed = 10.0f;
+    public float speed = 8.0f;
     public float activeTime = 3.0f;
     public float spawnTime;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("충돌");
+            SceneManager.LoadScene("ResultScene");
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +34,8 @@ public class BulletBehavior : MonoBehaviour
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
+        
+
         if(Time.time - spawnTime >= activeTime)
         {
             gameObject.SetActive(false);
@@ -32,5 +44,6 @@ public class BulletBehavior : MonoBehaviour
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
+
     }
 }

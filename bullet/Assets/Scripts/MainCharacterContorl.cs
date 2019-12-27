@@ -5,12 +5,20 @@ using UnityEngine;
 public class MainCharacterContorl : MonoBehaviour
 {
     public int speed = 20;
-    GameObject main_character;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "bullet")
+        {
+            Debug.Log("충돌");
+           // Application.LoadLevel("ResultScene");
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
