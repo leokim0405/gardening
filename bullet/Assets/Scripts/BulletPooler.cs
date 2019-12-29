@@ -6,7 +6,7 @@ public class BulletPooler : MonoBehaviour
 {
     public float coolTime = 0.1f;
     public GameObject bullet;
-    public int poolCount = 0;
+    public int poolCount = 10;
 
     List<GameObject> bullets;
 

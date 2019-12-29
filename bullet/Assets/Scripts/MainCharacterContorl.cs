@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainCharacterContorl : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class MainCharacterContorl : MonoBehaviour
         if (other.gameObject.tag == "bullet")
         {
             Debug.Log("충돌");
-           // Application.LoadLevel("ResultScene");
+            SceneManager.LoadScene("ResultScene");
+            // Application.LoadLevel("ResultScene");
         }
     }
 
@@ -21,10 +23,12 @@ public class MainCharacterContorl : MonoBehaviour
 
     }
 
+    public static Vector2 Position;
+
     // Update is called once per frame
     void Update()
     {
-        Vector2 Position = transform.position;
+        Position = transform.position;
 
         if (Position.x > 8) transform.position = new Vector2(-8, Position.y);
         if (Position.x < -8) transform.position = new Vector2(8, Position.y);
