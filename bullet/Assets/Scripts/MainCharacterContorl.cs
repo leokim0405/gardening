@@ -12,6 +12,7 @@ public class MainCharacterContorl : MonoBehaviour
         if (other.gameObject.tag == "bullet")
         {
             Debug.Log("충돌");
+            Destroy(other);
             SceneManager.LoadScene("ResultScene");
             // Application.LoadLevel("ResultScene");
         }
