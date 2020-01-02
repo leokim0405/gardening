@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartManager : MonoBehaviour
+public class ResultSceneManager : MonoBehaviour
 {
-
-    public void GameStart()
+    public void Replay()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("StartScene");
     }
     // Start is called before the first frame update
     void Start()
