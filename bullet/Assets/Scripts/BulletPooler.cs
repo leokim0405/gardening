@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletPooler : MonoBehaviour
 {
+    /*
     public float coolTime = 0.1f;
     public GameObject bullet;
     public int poolCount = 10;
@@ -35,5 +36,5 @@ public class BulletPooler : MonoBehaviour
                 break;
             }
         }
-    }
+    }*/
 }

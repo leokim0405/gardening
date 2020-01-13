@@ -23,6 +23,7 @@ public class BulletBehavior : MonoBehaviour
     {
         
     }
+
     public void Spawn()
     {
         gameObject.SetActive(true);
@@ -39,10 +40,11 @@ public class BulletBehavior : MonoBehaviour
 
         if(Time.time - spawnTime >= activeTime)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
         else
         {
+            gameObject.SetActive(true);
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
 
