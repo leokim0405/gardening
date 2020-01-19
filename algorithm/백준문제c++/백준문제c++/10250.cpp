@@ -6,7 +6,7 @@ using namespace std;
 int findRoom(int H, int W, int N)
 {
 	int floor, room;
-
+	/*
 	for (int j = 1; j <= W; j++)
 	{
 		if (N <= H * j)
@@ -15,8 +15,15 @@ int findRoom(int H, int W, int N)
 			break;
 		}
 	}
-	floor = N - (H * (room - 1));
+	floor = N - (H * (room - 1));*/
+	floor = N % H;
+	room = N / H + 1;
 
+	if (floor == 0)
+	{
+		floor = H;
+		room--;
+	}
 
 	return 100 * floor + room;
 }
