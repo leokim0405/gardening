@@ -1,5 +1,4 @@
 #include <iostream>
-#include <math.h>
 
 using namespace std;
 
@@ -23,8 +22,8 @@ int main()
 
 	int gap1, gap2;
 
-	gap1 = abs(h - y);
-	gap2 = abs(w - x);
+	gap1 = (h - y);
+	gap2 = (w - x);
 
 	cout << min(min(min(x, y), gap1), gap2);
 
