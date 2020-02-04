@@ -11,7 +11,7 @@ public:
 
 	void print()
 	{
-		cout << xpos << " " << ypos << endl;
+		cout << xpos << " " << ypos << "\n";
 	}
 	int get_x()
 	{

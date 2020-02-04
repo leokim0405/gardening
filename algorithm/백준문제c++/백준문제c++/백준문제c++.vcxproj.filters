@@ -87,7 +87,10 @@
     <ClCompile Include="11729-re.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="11651_re.cpp">
+    <ClCompile Include="11651.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5086.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
