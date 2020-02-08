@@ -29,7 +29,10 @@ int main()
 
 	if (!is_prime)
 	{
-		printf("%d", N);
+		if (N != 1)
+		{
+			printf("%d", N);
+		}
 	}
 	else
 	{
