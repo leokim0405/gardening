@@ -2,37 +2,31 @@
 
 using namespace std;
 
+int count;
 
-void hanoi(int a, int b, int c);
-
-int main()
+void move(int from, int to)
 {
-	int N, count = 1;
-	cin >> N;
-
-	for (int i = 0; i < N; i++)
-	{
-		count *= 2;
-	}
-	printf("%d", count + 1);
-	hanoi(N, 0, 0);
-
-	return 0;
+	cout << from << " " << to << endl;
 }
 
-void hanoi(int a, int b, int c)
+void hanoi(int n, int from, int mid, int to)
 {
+	if (n == 1)
+		cout << from << " " << to << endl;
+	else {
+		hanoi(n - 1, from, to, mid);
+		move(from, to);
+		hanoi(n - 1, mid, from, to);
+	}
+}
 
-	if (a == 1 && b == 0)
-	{
-		printf("1 3");
-	}
-	else if (a == 0 && b == 1)
-	{
-		printf("2 3");
-	}
-	else
-	{
-		hanoi(a - 1, 1, 0);
-	}
+int main(void)
+{
+	ios::sync_with_stdio(false);
+	int n;
+	cin >> n;
+
+	count = (1 << n) - 1;
+	cout << count << endl;
+	hanoi(n, 1, 2, 3);
 }
